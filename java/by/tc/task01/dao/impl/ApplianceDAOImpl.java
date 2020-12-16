@@ -66,13 +66,15 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 
 			}
 
-			reader.close();
+			
 
 		} catch (Exception ex) {
 			System.out.println("Произошла ошибка");
 			System.out.println(ex);
 
 		}
+		finally(){reader.close();
+			 }
 
 		return applianceArray;
 	}
